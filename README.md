@@ -6,5 +6,7 @@ Workshop for Go code
 ```shell
 go run cmd/main
 
-go test ./...
+go test ./... -failfast -run TestName -v
+
+go get -u all && go mod tidy
 ```

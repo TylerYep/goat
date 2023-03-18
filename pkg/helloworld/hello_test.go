@@ -3,7 +3,7 @@ package helloworld
 import (
 	"testing"
 
-	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 )
 
 // TestHelloName calls greetings.Hello with a name, checking
@@ -11,6 +11,6 @@ import (
 func TestHelloName(t *testing.T) {
 	name := "Tyler"
 	msg, err := SayHello(name)
-	assert.Nil(t, err)
-	assert.Equal(t, msg, "Hello Tyler!", "Says hello to Tyler.")
+	require.Nil(t, err)
+	require.Equal(t, msg, "Hello Tyler!", "Says hello to Tyler.")
 }
